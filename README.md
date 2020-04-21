@@ -1,19 +1,30 @@
-# GR
+#  create django-react-project
+
 ###
 https://docs.google.com/document/d/1o6QXta24f78ghKa9PUpsPxHQTL7ybDwuqrUTJxet8z0/edit#
+
 $ python --version
+
 Python 2.7.13
 
 $ which python3.5
 /usr/bin/python3.5
+
 $ alias python='/usr/bin/python3.5'
+
 $ python --version
 Python 3.5.3
+
 $ python3 -m venv venv
+
 $ source venv/bin/activate
+
 $ pip install django djangorestframework django-cors-headers
+
 $ django-admin startproject django_react_proj
-# django-react-logrocket
+
+
+# GR
 A simple integration between Django API and React App
 
 This project is made up of two main ones:

@@ -1,3 +1,72 @@
+
+# GR - Run it locally
+A simple integration between Django API and React App
+
+This project is made up of two main ones:
+
+  - *growvick*: the Django project containing the REST API, along with all the
+    back-end code;
+  - *client*: the React project, with all Node dependencies, configs, and
+    front-end related stuff.
+
+    ## Run it locally
+
+    In order to run the projects locally, you need to have Node, npm and Python
+    installed on your machine.
+
+    ### Running the Django project
+
+    Make sure you have python3 installed in your machine.
+
+    First, let's create the python virtual environment to isolate our projects:
+
+    ```bash
+    python3 -m venv env
+    ```
+
+    Then, activate it:
+
+    ```bash
+    source env/bin/activate
+    ```
+
+    Just then you can clone the project from GitHub. So, `cd` into the venv and
+    run:
+
+    ```bash
+    git clone https://git@github.com:scallopy/GR.git
+    ```
+
+    Now, add the needed Djano dependencies:
+
+    ```bash
+    pip install django djangorestframework django-cors-headers
+    ```
+
+    Great, just need to run the project now. For this, `cd` into the
+    django_react_proj/ folder and run:
+
+    ```bash
+    python manage.py runserver
+    ```
+
+    That's it. Access the address http://localhost:8000/api/users/ and check
+    for the API up and running.
+
+    ### Running the React project
+
+    First, `cd` the client/ directory and run:
+
+    ```bash
+    npm install
+    ```
+
+    Then, you just need to run the app via:
+
+    ```bash
+    npm start
+    ```
+
 #  create django-react-project
 
 ## Create backend:
@@ -52,7 +121,7 @@ Migrations for 'growvick':
 
   growvick/migrations/0002_growvick.py
 
-In short, the create_data method recovers the Student model object and creates
+In short, the create_data method recovers the User model object and creates
 initial data, just so that our database isn’t empty when the API starts.
 
 The dependencies property relates the other files to be considered into the
@@ -93,69 +162,3 @@ $ npm install bootstrap reactstrap axios --save
  SEE GR/django_react_proj/client/README.MD
 
 
-# GR
-A simple integration between Django API and React App
-
-This project is made up of two main ones:
-
-- *students*: the Django project containing the REST API, along with all the
-  back-end code;
-  - *students-fe*: the React project, with all Node dependencies, configs, and
-    front-end related stuff.
-
-    ## Run it locally
-
-    In order to run the projects locally, you need to have Node, caly@debian:~/Dev/GR/django_react_proj$ django-admin --version
-    2.2.12
-    ### Running the Django project
-
-    Make sure you have python3 installed in your machine.
-
-    First, let's create the python virtual environment to isolate our projects:
-
-    ```bash
-    python3 -m venv logrocket_env
-    ```
-
-    Then, activate it:
-
-    ```bash
-    source logrocket_env/bin/activate
-    ```
-
-    Just then you can clone the project from GitHub. So, `cd` into the venv and
-    run:
-
-    ```bash
-    git clone https://github.com/diogosouza/django-react-logrocket.git
-    ```
-
-    Now, add the needed Djano dependencies:
-
-    ```bash
-    pip install django djangorestframework django-cors-headers
-    ```
-
-    Great, just need to run the project now. For this, `cd` into the
-    django-react-logrocket folder and run:
-
-    ```bash
-    python manage.py runserver
-    ```
-
-    That's it. Access the address http://localhost:8000/api/students/ and check
-    for the API up and running.
-
-    ### Running the React project
-
-    First, `cd` the students-fe directory and run:
-
-    ```bash
-    npm install
-    ```
-
-    Then, you just need to run the app via:
-
-    ```bash
-    npm start
-    ```

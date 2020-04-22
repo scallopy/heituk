@@ -1,5 +1,51 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Building the React app
+
+- Components
+    - Header.js
+    - NewUserForm.js
+    In the first lines, we’re importing the reactstrap components for the first
+    time including Form, Button, etc, which will comprise our form.
+
+    Then, we created our `state` object with the corresponding properties of our
+    Student’s model. This is going to be useful to manipulate each prop
+    individually.
+
+    The `componentDidMount` function will run after the component finishes its
+    startup, so we can recover the student’s props from the parent component
+    (`this.props`) here, and set the state with them (if they exist, for the
+    editing scenario.)
+
+    The `onChange` function will handle the update of each state’s prop with the
+    current value typed in each respective field
+
+    The `createUser` function will deal with the HTTP POST requests of our
+    form. Every time we press the submit button, this function will be called,
+    triggering the axios’ `post()` function and passing the current state in the
+    request’s `body`. Once it’s completed, we’ll call the `props` functions
+    `resetState` (to refresh the table) and `toggle` (to close the modal), they’ll
+    be created further
+
+    `editStudent` function works almost like the previous one, but calling our
+    PUT operation
+
+    The `defaultIfEmpty` function was created as an auxiliary function that’ll
+    check the current value of each field in order to determine if they’re
+    going to be filled with the value of the state (in case any exists, for
+    editing) or not (when creating a new student)
+
+    The `render` function will just compose our form with the help of reactstrap
+    components. Nothing special here, except for the onSubmit property, which
+    checks for a props’ property called students: if it does exist, the submit
+    function will be for editing (the value was passed by the parent
+    component); otherwise, it’s for creation.
+
+    - NewUserModal.js
+    - StudentList.js
+    - ConfirmRemovalModal.js
+    - Home.js
+
 ## Available Scripts
 
 In the project directory, you can run:

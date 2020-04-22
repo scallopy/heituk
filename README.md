@@ -66,9 +66,11 @@ $ python3 manage.py migrate
 
 ## The REST API
 
-  *Create file serializers.py in growvick*
-  *Creat endpoints for users_list and users_detail*
-  *Create views*
+  Create file serializers.py in growvick
+
+  Creat endpoints for users_list and users_detail
+
+  Create views
 
   $ python manage.py runserver
 

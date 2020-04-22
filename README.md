@@ -30,14 +30,13 @@ This project is made up of two main ones:
     source env/bin/activate
     ```
 
-    Just then you can clone the project from GitHub. So, `cd` into the venv and
-    run:
+    Just then you can clone the project from GitHub. So run:
 
     ```bash
     git clone https://git@github.com:scallopy/GR.git
     ```
 
-    Now, add the needed Djano dependencies:
+    Now, `cd` into the GR/ and add the needed Djano dependencies:
 
     ```bash
     pip install django djangorestframework django-cors-headers

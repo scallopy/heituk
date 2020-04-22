@@ -90,7 +90,7 @@ $ cd client/
 
 $ npm install bootstrap reactstrap axios --save
 
-
+ SEE GR/django_react_proj/client/README.MD
 
 
 # GR

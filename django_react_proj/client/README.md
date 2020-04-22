@@ -2,18 +2,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Building the React app
 
-- Components
+- Components: https://blog.logrocket.com/creating-an-app-with-react-and-django/
     - Header.js
     - NewUserForm.js
     In the first lines, we’re importing the reactstrap components for the first
     time including Form, Button, etc, which will comprise our form.
 
     Then, we created our `state` object with the corresponding properties of our
-    Student’s model. This is going to be useful to manipulate each prop
+    User’s model. This is going to be useful to manipulate each prop
     individually.
 
     The `componentDidMount` function will run after the component finishes its
-    startup, so we can recover the student’s props from the parent component
+    startup, so we can recover the user’s props from the parent component
     (`this.props`) here, and set the state with them (if they exist, for the
     editing scenario.)
 
@@ -27,24 +27,25 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     `resetState` (to refresh the table) and `toggle` (to close the modal), they’ll
     be created further
 
-    `editStudent` function works almost like the previous one, but calling our
+    `editUser` function works almost like the previous one, but calling our
     PUT operation
 
     The `defaultIfEmpty` function was created as an auxiliary function that’ll
     check the current value of each field in order to determine if they’re
     going to be filled with the value of the state (in case any exists, for
-    editing) or not (when creating a new student)
+    editing) or not (when creating a new user)
 
     The `render` function will just compose our form with the help of reactstrap
     components. Nothing special here, except for the onSubmit property, which
-    checks for a props’ property called students: if it does exist, the submit
+    checks for a props’ property called users: if it does exist, the submit
     function will be for editing (the value was passed by the parent
     component); otherwise, it’s for creation.
 
     - NewUserModal.js
-    - StudentList.js
+    - UserList.js
     - ConfirmRemovalModal.js
     - Home.js
+
 
 ## Available Scripts
 

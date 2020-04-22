@@ -32,13 +32,13 @@ $ django-admin startproject django_react_proj
 
 $ django-admin startapp growvick
 
-Create model User:
+- Create model User:
 
 $ python3 manage.py makemigrations
 
 $ python3 manage.py migrate
 
-Create data migration file:
+- Create data migration file:
 
 It represents the direct manipulation of data into the database.
 
@@ -66,7 +66,7 @@ $ python3 manage.py migrate
 
 ## The REST API
 
-  Create file serializers.py in growvick
+  Create file serializers.py in growvick/
 
   Creat endpoints for users_list and users_detail
 

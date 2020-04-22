@@ -78,6 +78,21 @@ $ python3 manage.py migrate
 
   and access http://localhost:8000/api/users/
 
+
+## Building the React app
+
+$ npm init react-app client
+
+### - Create react-app:
+https://github.com/facebook/create-react-app
+
+$ cd client/
+
+$ npm install bootstrap reactstrap axios --save
+
+
+
+
 # GR
 A simple integration between Django API and React App
 

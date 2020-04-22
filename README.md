@@ -1,5 +1,7 @@
 #  create django-react-project
 
+## Create backend:
+
 ###
 https://docs.google.com/document/d/1o6QXta24f78ghKa9PUpsPxHQTL7ybDwuqrUTJxet8z0/edit#
 
@@ -21,8 +23,58 @@ $ source venv/bin/activate
 
 $ pip install django djangorestframework django-cors-headers
 
+(env) scaly@debian:~/Dev/GR/django_react_proj$ django-admin --version
+
+2.2.12
+
+
 $ django-admin startproject django_react_proj
 
+$ django-admin startapp growvick
+
+Create model User:
+
+$ python3 manage.py makemigrations
+
+$ python3 manage.py migrate
+
+Create data migration file:
+
+It represents the direct manipulation of data into the database.
+
+$ python3 manage.py makemigrations --empty --name users users
+
+No installed app with label 'users'.
+
+$ python3 manage.py makemigrations --empty --name growvick growvick
+
+Migrations for 'growvick':
+
+  growvick/migrations/0002_growvick.py
+
+In short, the create_data method recovers the Student model object and creates
+initial data, just so that our database isn’t empty when the API starts.
+
+The dependencies property relates the other files to be considered into the
+migration process.
+
+The operations are basically the actions Django has to perform once the
+migration is triggered.
+
+$ python3 manage.py migrate
+
+
+## The REST API
+
+  *Create file serializers.py in growvick*
+  *Creat endpoints for users_list and users_detail*
+  *Create views*
+
+  $ python manage.py runserver
+
+  After you see the log showing our server is up and running, go to the browser
+
+  and access http://localhost:8000/api/users/
 
 # GR
 A simple integration between Django API and React App
@@ -36,9 +88,8 @@ This project is made up of two main ones:
 
     ## Run it locally
 
-    In order to run the projects locally, you need to have Node, npm and Python
-    installed on your machine.
-
+    In order to run the projects locally, you need to have Node, caly@debian:~/Dev/GR/django_react_proj$ django-admin --version
+    2.2.12
     ### Running the Django project
 
     Make sure you have python3 installed in your machine.

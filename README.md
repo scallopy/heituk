@@ -65,6 +65,12 @@ This project is made up of two main ones:
     ```bash
     npm start
     ```
+# Integrating React App with Django in production
+
+https://www.techiediaries.com/create-react-app-django/
+
+https://fractalideas.com/blog/making-react-and-django-play-well-together/
+
 
 #  create django-react-project
 

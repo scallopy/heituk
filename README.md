@@ -51,9 +51,10 @@ This project is made up of two main ones:
     ```bash
     source env/bin/activate
     ```
+
     Add the needed Djano dependencies:
 
-   ```bash
+    ```bash
     pip install django djangorestframework django-cors-headers
     ```
     Now, cd into the django_react_proj/ folder and run migrations:

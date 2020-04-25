@@ -59,6 +59,7 @@ This project is made up of two main ones:
     Now, cd into the django_react_proj/ folder and run migrations:
 
     ```bash
+
     $ python3 manage.py makemigrations
 
     $ python3 manage.py migrate

@@ -16,7 +16,29 @@ This project is made up of two main ones:
 
     ### Running the Django project
 
-    Make sure you have python3 installed in your machine.
+    Just then you can clone the project from GitHub. So run:
+
+    ```bash
+    git clone git@github.com:scallopy/heituk-react.git
+    ```
+
+    Now, `cd` into the heituk-react/ folder:
+
+    Make sure you have python3 installed in your machine:
+
+    ```bash
+    $ python --version
+    Python 2.7.13
+
+    $ which python3.5
+    /usr/bin/python3.5
+
+    $ alias python=/usr/bin/python3.5
+
+    $ python --version
+    Python 3.5.3
+
+    ```
 
     First, let's create the python virtual environment to isolate our projects:
 
@@ -29,24 +51,28 @@ This project is made up of two main ones:
     ```bash
     source env/bin/activate
     ```
+    Add the needed Djano dependencies:
 
-    Just then you can clone the project from GitHub. So run:
-
-    ```bash
-    git clone https://git@github.com:scallopy/GR.git
-    ```
-
-    Now, `cd` into the GR/ and add the needed Djano dependencies:
-
-    ```bash
+   ```bash
     pip install django djangorestframework django-cors-headers
     ```
+    Now, cd into the django_react_proj/ folder and run migrations:
 
-    Great, just need to run the project now. For this, `cd` into the
-    django_react_proj/ folder and run:
+    ```bash
+    $ python3 manage.py makemigrations
+
+    $ python3 manage.py migrate
+
+    ```
+
+    Great, just need to run the project now:
 
     ```bash
     python manage.py runserver
+
+    or
+
+    python3 manage.py runserver
     ```
 
     That's it. Access the address http://localhost:8000/api/users/ and check

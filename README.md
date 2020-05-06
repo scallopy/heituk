@@ -1,5 +1,8 @@
 
-# GR - Run it locally
+# heituk-react
+
+#Run it locally
+
 A simple integration between Django API and React App
 
 This project is made up of two main ones:
